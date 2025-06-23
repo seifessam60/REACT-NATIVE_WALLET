@@ -25,6 +25,8 @@ export const useTransactions = (userId) => {
     try {
       const response = await fetch(`${API_URL}/transactions/summary/${userId}`);
       const data = await response.json();
+      // console.log(response);
+
       setSummary(data);
     } catch (error) {
       console.error("Error fetching summary:", error);
